@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // <!--Масиви та об'єкти-->
+    // <!--#67kfznmiMl-->
+    // <!-- - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль-->
+
+    let arr;
+    arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+    console.log(arr[9]);
+
+
+    // <!--#LARqoUj5I-->
+    // <!-- - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.-->
+    let book1 = {
+        title: 'Charlotte’s Web',
+        pageCount: 192,
+        genre: 'Fantasy'
+    }
+    console.log(book1);
+
+    let book2 = {
+        title: 'The Gruffalo',
+        pageCount: 32,
+        genre: 'Fable'
+    }
+    console.log(book2);
+
+
+    let book3 = {
+        title: 'Harry Potter and the Sorcerer’s Stone',
+        pageCount: 309,
+        genre: 'Adventure'
+    }
+    console.log(book3);
+
+
+    // <!--#sA3Gg1sCp-->
+    // <!-- - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.-->
+
+    let book4 = {
+        title: 'Goodnight Moon',
+        pageCount: 195,
+        genre: 'Adventure',
+        autors: [
+            {
+                name: 'Margaret Wise Brown',
+                age: 42
+            },
+            {
+                name: 'Aaaaaa',
+                age: 65
+            },
+            {
+                name: 'Bbbbbbbb',
+                age: 46
+            }
+        ]
+    }
+    console.log(book4);
+
+    let book5 = {
+        title: 'Brown Bear, Brown Bear, What Do You See?',
+        pageCount: 32,
+        genre: 'Educational',
+        autors: [
+            {
+                name: 'Bill Martin',
+                age: 57
+            },
+            {
+                name: 'Eric Carle',
+                age: 49
+            },
+            {
+                name: 'Ddddddddd',
+                age: 42
+            }
+        ]
+    }
+    console.log(book5);
+
+    let book6 = {
+        title: 'The Cat in the Hat?',
+        pageCount: 32,
+        genre: 'Picture Book',
+        autors: [
+            {
+                name: 'Dr. Seuss',
+                age: 46
+            },
+            {
+                name: 'Ooooooo',
+                age: 56
+            },
+            {
+                name: 'Pppppp',
+                age: 36
+            }
+        ]
+    }
+    console.log(book6);
+
+
+    // <!--#jCHFnEbdmFd-->
+    // <!-- - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача-->
+
+    let arr1 = [
+        {
+            name: 'Olha',
+            username: 'OlhaB',
+            password: 123
+        },
+        {
+            name: 'Vova',
+            username: 'VovaB',
+            password: 456
+        },
+        {
+            name: 'Nastya',
+            username: 'NastyaB',
+            password: 789
+        },
+        {
+            name: 'Aaaaaaa',
+            username: 'AaaaaaaB',
+            password: 268
+        },
+        {
+            name: 'Bbbbbbb',
+            username: 'BbbbbbbB',
+            password: 498
+        },
+        {
+            name: 'Cccccc',
+            username: 'CcccccccB',
+            password: 768
+        },
+        {
+            name: 'Dddddddd',
+            username: 'DddddddddB',
+            password: 428
+        },
+        {
+            name: 'Eeeeee',
+            username: 'EeeeeeeeB',
+            password: 719
+        },
+        {
+            name: 'Ffffffff',
+            username: 'FffffffffB',
+            password: 149
+        },
+        {
+            name: 'Gggggggg',
+            username: 'GggggggB',
+            password: 426
+        },
+        {
+            name: 'Hhhhhhhh',
+            username: 'HhhhhhhhB',
+            password: 479
+        },
+    ];
+    console.log(arr1[0].password);
+    console.log(arr1[1].password);
+    console.log(arr1[2].password);
+    console.log(arr1[3].password);
+    console.log(arr1[4].password);
+    console.log(arr1[5].password);
+    console.log(arr1[6].password);
+    console.log(arr1[7].password);
+    console.log(arr1[8].password);
+    console.log(arr1[9].password);
+
+
+    // <!--#coYydZuaeEB-->
+    // <!-- - описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів. Як зробити цей масив - вам потрібно подумати. Нормальних варіантів опису - 2. Варіант, коли в вас буде одновимірний масив з 21 значенням вичключаємо одразу-->
+    let temps = [
+        {Day: 'Monday', MorningTemp: 17, DayTemp: 20, EverningTemp: 14},
+        {Day: 'Tuesday', MorningTemp: 14, DayTemp: 18, EverningTemp: 15},
+        {Day: 'Wednesday', MorningTemp: 12, DayTemp: 22, EverningTemp: 18},
+        {Day: 'Thursday', MorningTemp: 15, DayTemp: 25, EverningTemp: 12},
+        {Day: 'Friday ', MorningTemp: 19, DayTemp: 21, EverningTemp: 17},
+        {Day: 'Saturday', MorningTemp: 12, DayTemp: 18, EverningTemp: 11},
+        {Day: 'Sunday', MorningTemp: 13, DayTemp: 21, EverningTemp: 21},
+
+
+    ]
+
+
+    // <!--Логічні розгалуження:-->
+
+    // <!--#bAUsaq6LI-->
+    // <!-- - Є змінна х, якій ви надаєте довільне числове значення.-->
+    // <!--Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3-->
+
+    let x = +prompt('enter number');
+    if (x !== 0) {
+        console.log('Вірно');
+    } else {
+        console.log('Невірно');
+    }
+
+
+    // <!--#3ckURgvs-->
+    // <!-- - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число-->
+    // <!--(в першу, другу, третю или четверту частину години).-->
+
+    let time = +prompt('enter number from 0 to 59');
+    if (time >= 0 && time <= 15) {
+        console.log('1 четверть');
+    }
+    if (time >= 16 && time <= 30) {
+        console.log('2 четверть');
+    } else if (time >= 31 && time <= 45) {
+        console.log('3 четверть');
+    } else if (time >= 46 && time <= 59) {
+        console.log('4 четверть');
+    } else if (time >= 60) {
+        console.log('wrong');
+    }
+    // <!--#UMoNq4biWGe-->
+    // <!-- - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).-->
+    let day = +prompt('enter number from 1 to 31');
+    if (day >= 1 && day <= 10) {
+        console.log('1 декада');
+    }
+    if (day >= 11 && day <= 20) {
+        console.log('2 декада');
+    } else if (day >= 21 && day <= 31) {
+        console.log('3 декада');
+    } else if (day >= 32) {
+        console.log('wrong');
+    }
+
+
+    <!--#KzrtqyQ-->
+    <!-- - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).-->
+
+    let day1 = +prompt('enter number from 1 to 7');
+    switch (day1) {
+        case 1:
+            console.log('Monday');
+            break;
+        case 2:
+            console.log('Tuesday');
+            break;
+        case 3:
+            console.log('Wednesday');
+            break;
+        case 4:
+            console.log('Thursday');
+            break;
+        case 5:
+            console.log('Friday');
+            break;
+        case 6:
+            console.log('Saturday');
+            break;
+        case 7:
+            console.log('Sunday');
+            break;
+        default:
+            console.log('?????????');
+    }
+
+
+    // <!--#uwsz1RnTQJ1-->
+    // <!-- - Користувач вводить або має два числа.-->
+    // <!--Потрібно знайти та вивести максимальне число з тих двох .-->
+    // <!--Також потрібно врахувати коли введені рівні числа.-->
+
+    let number1 = +prompt('enter number');
+    let number2 = +prompt('enter number');
+    if (number1 > number2) {
+        console.log(number1)
+    } else if (number2 > number1) {
+        console.log(number2)
+    } else if (number1 === number2) {
+        console.log('Рівні')
+    }
+
+
+    <!--#iBvqtjEm-->
+    <!-- - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,-->
+    <!--буде присвоювати змінній х значення "default"  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).-->
+
+    let x1 = 0;
+    if (x1 === 0 || x === '' || x1 === null || x1 === undefined || x1 === NaN) {
+        x = 'default';
+    }
+
+
+    <!--#awLXL6TBzg-->
+    <!-- - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".-->
+
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+    if (coursesAndDurationArray[0].monthDuration > 5) {
+        console.log('Super')
+    }
+    if (coursesAndDurationArray[1].monthDuration > 5) {
+        console.log('Super')
+    }
+    if (coursesAndDurationArray[2].monthDuration > 5) {
+        console.log('Super')
+    }
+    if (coursesAndDurationArray[3].monthDuration > 5) {
+        console.log('Super')
+    }
+    if (coursesAndDurationArray[4].monthDuration > 5) {
+        console.log('Super')
+    }
+    if (coursesAndDurationArray[5].monthDuration > 5) {
+        console.log('Super')
+    }
+</script>
+</body>
+</html>
