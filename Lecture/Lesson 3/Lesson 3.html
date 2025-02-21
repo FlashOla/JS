@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .target img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // JS preview | Інкремент / декременти
+    // JS preview |  Цикл for of
+    // JS preview |  Цикл for
+    // JS preview | Цикл for in
+    // JS preview |  Цикл while
+
+
+
+    // ------------------------------------- JS preview | Інкремент / декременти --------------------------------------------
+    // let x = 0;
+    // x = x + 1; // x = 1 //ліва частина це завжди тільки звернення
+    // console.log(x);
+
+    // x++;//інкремент тільки на 1
+    // console.log(x); //2
+    //
+    // x += 1;//будь який крок 2 3 5 110   * /
+    // console.log(x);// 3
+    //
+    // x = x - 1; // 2
+    // console.log(x);
+    // x -= 1; // 1
+    // console.log(x);
+
+    // x--;//декремент тільки на 1
+    // console.log(x); //0
+
+    // let x = 0;
+    //x++; постфіксний інкремент
+    // ++x; префіксний інкремент
+    // console.log(x); // 1
+    //
+    // let a = 0;
+    // let с = a++;      //зручніше
+    // console.log(a, с);//a=1 c=0
+    // let b = ++a;
+    // console.log(a, b); // a = 1 b =1
+
+
+
+    //-------------------------------------------------- JS preview |  Цикл for -------------------------------------------------
+//1
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true},
+    //     {name: 'max', age: 31, status: true},
+    //     {name: 'max', age: 31, status: true},
+    //     {name: 'max', age: 31, status: true},
+    //     {name: 'max', age: 31, status: true},
+    //     {name: 'max', age: 31, status: true},
+    //     {name: 'max', age: 31, status: true},
+    // ];
+
+    //console.log(users[0]);
+    //console.log(users[1]);
+    //console.log(users[2]);//долго щоб уникнути повторення цієї операції
+    //
+
+// debugger;//запускає режим
+//     for (let i = 2; i < users.length-1; i++) {// довжина масива
+//         console.log (users[i]);
+//     }
+
+    // for (let i = 0; i < users.length; i++) {
+    //     document.write(`<h3>user info-${users[i].name} ${users[i].age}-${users[i].status}</h3>`)//звернемось через інтерполяцію до нашого і елемента
+    // }
+
+    // for (let i = 0; i < users.length; i++) {//itar+tab по останьому масиву
+    //     let user = users[i]; //надлишкова інформація
+    //     document.write(`<h3>user info-${user.name} ${user.age}-${user.status}</h3>`); //зручніше
+    // }
+//2
+//     let products = [//4 обєкта
+//         {
+//             title: 'milk',
+//             price: 22,
+//             image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+//         },
+//         {
+//             title: 'juice',
+//             price: 27,
+//             image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+//         },
+//         {
+//             title: 'tomato',
+//             price: 47,
+//             image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+//         },
+//         {
+//             title: 'tea',
+//             price: 15,
+//             image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+//         },
+//     ]; // DB
+//
+//     for (let i = 0; i < products.length; i++) {
+//         const product = products[i];
+//         document.write(`<div class="target">
+//                             <h2>${product.title} - ${product.price} UAH</h2>
+//                             <img src="${product.image}" alt="">
+//
+//                       </div>`);
+//     }
+
+
+    //----------------------------------------------------  JS preview |  Цикл for of -----------------------------------------------
+    //1
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // for (let user of users) {//user тимчасова ячейка перебирає увесь масив від початку і до кінця
+    //     console.log(user);
+    // }
+    //2
+    // let products = [
+    //     {
+    //         title: 'milk',
+    //         price: 22,
+    //         image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    //     },
+    //     {
+    //         title: 'juice',
+    //         price: 27,
+    //         image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    //     },
+    //     {
+    //         title: 'tomato',
+    //         price: 47,
+    //         image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    //     },
+    //     {
+    //         title: 'tea',
+    //         price: 15,
+    //         image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+    //     },
+    // ]; // DB
+    //
+    // for (let product of products) {//якщо потрібно перебрати всі елементи масива for of якщо певні діапозони то for
+    //
+    //     document.write(`<div class="target">
+    //                         <h2>${product.title} - ${product.price} UAH</h2>
+    //                         <img src="${product.image}" alt="">
+    //                   </div>`);
+    // }
+
+
+    // ------------------------------------ JS preview | Цикл for in -----------------------------------------------------
+
+// 1
+//
+//     let user = {
+//         id: 1,
+//         name: 'vasya',
+//         status: true,
+//         skills: [],
+//
+//     }
+//
+//     for (let fieldName in user) {  //for in перебирати обєкти
+      //  console.log(fieldName);//витягнути кожну назву поля без значення
+    //     console.log (user[fieldName]);//витягнути значення більш зручніша з точки зору продуктивності
+    // console.log (user['name']);
+   // console.log (user.id);//зручніше в процесі написання
+   //console.log(fieldName, user[fieldName]);//id    1  name vasya
+    // }
+
+//2
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // for (const user of users) {//перебираєте обєкти
+    //
+    //     for (const fieldName in user) {    //перебираєте поля вашого обєкта
+    //         console.log(fieldName, user[fieldName]);
+    //
+    //     }
+    //     console.log(''); //кожний сегмент окремо
+    //
+    //
+    // }
+    // --------------------------------------- JS preview |  Цикл while ------------------------------------
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    // let i = 0;
+    // while (i < users.length) {
+    //     let user = users[i];
+    //     console.log(user);
+    //     i++;
+    //
+    // }
+
+
+    do {
+        console.log('adshgfahsgdfhgsafd');
+    } while (false)
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

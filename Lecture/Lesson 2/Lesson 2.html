@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // JS preview | Масиви
+    // JS preview | Багатовимірні масиви
+    // JS preview | Об'єкти
+    // JS preview | Внутрішні об'єкти
+    // JS preview | Модифікація об'єктів
+    // JS preview | Різниця між примітивами та референціальними типами
+    // JS preview | Логічні розгалуження if
+    // JS preview | Логічні розгалуження switch
+    // JS Preview | Ternary
+    // ------------------------------------- // JS preview | Масиви---------------------------------------------
+    //
+    //   let arr;
+    //
+    //   arr = [123, 234, 345, -123, 0, true, 'asiugahd'];//контейнер в якому є ячейки
+    //   console.log(arr);//індексація починається з 0
+    //   console.log(arr[0]);//звернутися до ячейки 123
+    //   console.log(arr[2]);//345
+    //   console.log(arr[4]);//0
+    //   console.log(arr.length);//загальна довжина 7
+    //   console.log(arr.length-1)//останній індекс
+    //
+    //   arr[0] = 'new value';//перевизначити елемент масиву
+    //   console.log(arr);
+    //   arr[7] = 'okten';//в 7 додаємо хоча елементів 7
+    //   console.log(arr);//8 7 8
+    //   arr[arr.length] = 1293883;//в кінець масиву
+    //   console.log(arr);
+    //   arr[arr.length] = 'aiffysadf';
+    //   console.log(arr);
+
+    // ------------------------------------------- // JS preview | Багатовимірні масиви ------------------------------------------------
+    //масив з масивами
+    //        let arr = [
+    //         //    0   1   2
+    //              [11, 22, 33], // індекс 0
+    //         [], // індекс 1
+    //         [] // індекс 2
+    //     ];
+    //     console.log(arr);//[Array(0), Array(0), Array(0)]
+    //     //                           0  1  2
+    //     let innerArray = arr[0]; // 11 22 33 внутрішній масив
+    //     console.log(innerArray[1]); // 22
+    //
+    //     console.log(arr[0][1]);//трошки легше 22
+
+
+    // -------------------------------- // JS preview | Об'єкти -------------------------------------------
+    //   let user1 = {     //за алфавітом послідовність наших характеристик
+    //       id: 1,//характеристики та значення
+    //       name: 'vaysa',
+    //       age: 31
+    //   }
+    //
+    //   console.log(user1);
+
+    // ---------------------------------------JS preview | Внутрішні об'єкти-------------------------------------------
+    // let user1 = {
+    //     id: 1,
+    //     name: 'vaysa',
+    //     age: 31,
+    //     skills: ['html', 'js', 'java'],
+    //     wife: {
+    //         name: 'olya',
+    //         age: 28
+    //     }
+    // }
+    //
+    // // console.log(user1);
+    // // console.log(user1.id);//назва ключа
+    // // console.log(user1['age']);//обовязково string
+    // // console.log(user1.skills);//масив
+    // // console.log(user1.skills[2]);//ячейка java
+    // console.log(user1.wife)
+    // console.log(user1.wife.name);//послідовність звернень має значення
+
+    //------------------масиви з обєктами -----------------------------------------
+    // user один єдиний обєкт
+    //     let users = [
+    //         {skills: ['html', 'mysql', 'mongo'], id: 1, name: 'vasya', age: 31, status: true},
+    //         {skills: ['html', 'js'], id: 2, name: 'petya', age: 33, status: false},
+    //         {skills: ['html', 'js'], id: 3, name: 'anna', age: 28, status: true},
+    //         {skills: ['html', 'mysql', 'mongo'], id: 4, name: 'olya', age: 29, status: false}
+    //     ];
+    //     console.log(users);
+    //     let user0 = users[0];//зменшити навантаження
+    //
+    //     console.log(user0.age);//1 спосіб
+    //     console.log(user0['age']);//2 спосіб
+    //
+    //     console.log(users[0].skills[2]);//1 спосіб
+    //     console.log(users[0]['skills'][2]);//2 спосіб
+    //     console.log(users[0]['skills'][2]);//3 спосіб
+    // let user = users[0];
+    // let skills = user['skills'];
+    // console.log(skills[2])
+
+    // ---------------------------- JS preview | Модифікація об'єктів ---------------------------------------------------
+    // let user = {
+    //     id: 1,
+    //     name: 'vasya',
+    // };
+    //
+    // user.age = 31;// додати нову характеристику не маємо доступу до обєкту
+    // user.status = false;//1  спосів працювати з таким варіантом легше
+    // user['status'] = false;//2 спосіб більш динамічний
+    // console.log(user);
+    //
+    // delete user.id;//видалити перну характеристику
+    // console.log(user);
+
+
+    //-------------------------------- JS preview | Різниця між примітивами та референціальними типами -----------------------
+    // number// примітиви, ячейки які при копіюванні віддають свої значення
+    // string
+    // boolean
+    //
+    // let a = 100;
+    // let b = a;// клон подарували, не зв*язані
+    // b = b + 10; //110
+    // console.log(a); //100
+    //
+    // let user = {name: 'vasya'};
+    // let user2 = user; //масиви, обєкти це ссилочні типи данних два погляди на одну і туж саме людину
+    // console.log(user2);
+    // user2.age = 31;
+    // console.log(user2);
+    //
+    // console.log(user);// в ньому зявляється age 31
+
+
+    // ------------------------------------ JS preview | Логічні розгалуження if -----------------------------------
+
+    //1 // let age = prompt('enter your age');//123
+    // console.log(age, typeof age);     string
+
+    // let age = prompt('enter your age');//123
+    // console.log(age, typeof +age);     number
+    //            string
+
+    // let age = prompt('enter your age');//123
+    //let numAge = +age;
+    // console.log(age, typeof age);     number
+    //
+    // let age = +prompt('enter your age');//123
+
+    // console.log(age, typeof age);     number
+    //
+
+    // let age = +prompt('enter your age');//hfydkytg погана ознака поганого програмиста
+
+    // console.log(age, typeof age);     NaN not a number захистити не можливо
+
+
+    //2
+    //       булевий вираз
+    // // if (age >= 18) {
+    // //     console.log('watch your movie');// якщо true
+    // // }
+    //
+    //
+    // if (age >= 18) {
+    //     document.write('<h2>watch movie</h2>');//true
+    // } else {
+    //     document.write('<h2>go away</h2>'); //false тільки дві варіації
+    // }
+
+    //3
+    // let color = prompt('enter color');
+    //
+    // if (color === 'green') {
+    //if (confirm(is road clear?)) {   //друга перевірка ok true отмена false
+    //     console.log('you can go');
+    // } else {
+    // console.log('just wait')
+    // }
+    // else if (color === 'yellow') {
+    //     console.log('wait');
+    // } else if (color === 'red') {
+    //     console.log('stop');
+    // } else {
+    //     console.log('?????');
+    // }
+
+
+    // let color = prompt('enter color');
+    //
+    // if (color === 'green') {
+    //     console.log('you can go');
+    // } else if (color === 'yellow') {
+    //     console.log('wait');
+    // } else if (color === 'red') {
+    //     console.log('stop');
+    // } else {
+    //     console.log('?????');
+    // }
+
+    // let color = prompt('enter color');
+    // let isRoadClear = prompt('is road clear?');
+    //
+    // if (color === 'green') {
+    //     if (isRoadClear === 'yes') {
+    //         console.log('you can go');
+    //     } else {
+    //         console.log('wait pls');
+    //     }
+    //
+    // } else if (color === 'yellow') {
+    //     console.log('wait');
+    // } else if (color === 'red') {
+    //     console.log('stop');
+    // } else {
+    //     console.log('?????');
+    // }
+
+    // let color = prompt('enter color');
+    // let isRoadClear = prompt('is road clear?');
+    // if (color === 'green' && confirm('is road clear?') {
+    //     console.log('you can go');
+    // } else if (color === 'yellow') {
+    //     console.log('wait');
+    // } else if (color === 'red') {
+    //     console.log('stop');
+    // } else {
+    //     console.log('?????');
+    // }
+
+    // let color = prompt('enter color');
+    // let isRoadClear = confirm('is road clear?')
+    // if (color === 'green' && isRoadClear') {
+    //     console.log('you can go');
+    // } else if (color === 'yellow') {
+    //     console.log('wait');
+    // } else if (color === 'red') {
+    //     console.log('stop');
+    // } else {
+    //     console.log('?????');
+    // }
+
+    // let color = prompt('enter color');
+    // let isRoadClear = prompt('is road clear?');
+    //
+    // if (color === 'green' && isRoadClear === 'yes') {
+    //     console.log('you can go');
+    // } else if (color === 'yellow') {
+    //     console.log('wait');
+    // } else if (color === 'red') {
+    //     console.log('stop');
+    // } else {
+    //     console.log('?????');
+    // }
+
+
+    // let conf = confirm('asdf');
+    // console.log(conf);
+    // let x;
+    //
+    // if (conf) {
+    //     x = 100;
+    // } else {
+    //     x = 200;
+    // }
+    // console.log(x);
+    //
+    // let x = conf ? 100 : 200;
+    // console.log(x);
+
+
+    // let name = prompt('enter you name');
+    // if (!!name) {
+    //     console.log('....')
+    // } else {
+    //     name = 'john doe';
+    // }
+    //
+    //
+    // let name = prompt('enter you name') || 'john doe';
+    // console.log(name);
+
+    // let user = {};
+    // console.log(user.age);
+    // if (user.age) {
+    //     console.log('true');
+    // }else {
+    //     console.log('false');
+    // }
+    //
+
+    // --------------------------------------------- JS preview | Логічні розгалуження switch -------------------------------------
+    // let color = prompt('enter color');
+    // switch (color) {//значення яке буде порівнюватись в маймутньому
+        //     case 'green':
+        //         console.log('go!');
+        //         break;
+        //     case 'yellow':
+        //         console.log('wait');
+        //         break;
+        //     case 'red':
+        //         console.log('stop');
+        //         break;
+        //     default:
+        //         console.log('????');
+        // }
+
+
+        // switch ('yellow') {//множинні перевірки
+        //     case 'green':
+        //         console.log('go!');
+        //         break;
+        //     case 'yellow':
+        //         console.log('wait');
+        //         break;
+        //     case 'red':
+        //         console.log('stop');
+        //         break;
+        //     default:
+        //         console.log('????');
+        // }
+
+
+        // switch ('green') {
+        //     case 'green':
+        //     case 'light green':
+        //     case 'light blue':
+        //     case 'blue':
+        //         console.log('go!');
+        //         break;
+        //     case 'yellow':
+        //         console.log('wait');
+        //         break;
+        //     case 'red':
+        //         console.log('stop');
+        //         break;
+        //     default:
+        //         console.log('????');
+        // }
+
+
+        // let color = prompt('enter color');
+        //     switch (color) {//значення яке буде порівнюватись в маймутньому
+        //         case 'green'://випадки ключ відкриває певний чемоданчик
+        //         case 'yellow':
+        //             console.log('go!');
+        //             break;//оператор преривання
+        //         case 'red':
+        //             console.log('stop');
+        //             break;
+        //         default:
+        //             console.log('????');
+        //     }
+
+    // --------------------------------------------- JS Preview | Ternary ----------------------------------------------------------
+
+// тернарний оператор
+let obj = {
+    id: 1,
+    name: 'vasya',
+    age: 19
+}
+// let access;
+// let condition = obj.age > 18;
+// //if (obj.age > 18) {
+//   if (condition) {
+//     access = true;
+// } else {
+//     access = false
+// }
+// console.log(access);
+
+
+
+    // let access = obj.age > 18 ? true : false;
+    //
+    // console.log(access);
+
+    // let access = obj.age > 18 ? 'Yes' : 'No';//виконати якусь дію це не гарний варіант//присвоїти в середину access
+//чи  obj.age > 18 якщо так записати в змінну access Yes, якщо ні записати в змінну access No
+//     console.log(access);
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // JS preview | Функціональні вирази
+    // JS preview | Стрілочні функції
+    // JS preview | Функції в об'єктах та контекст this
+    // JS preview | Замикання
+    // JS preview | Рекурсія
+    // JS preview | Генератори
+    // JS preview | Обробка помилок
+
+    // ----------------------------------------  JS preview | Функціональні вирази -----------------------------------------------------------
+
+    // greeting();        //чи можете ви покликати змінну до того як вона оголошена. Ні
+    // const greeting = function () {      //створюємо змінну і вкладаємо в неї функцію. Функція в JS являється обєктом
+    //   console.log('hi!');
+    // };
+    //
+    //
+    // asd();//де б не була оголошена ось така функція викликати її можливо в будь якому місці
+    // function asd() {//hoisting всплиття піднімаються до гори script
+    //   console.log('ashfdhgsafdh');
+    // }
+
+    // ----------------------------------------------------- JS preview | Стрілочні функції --------------------------------------------------------
+
+    // function calc(a,b) {
+    //     return a + b;
+    // }
+    //іншим способом
+    // let calc = (a, b) => /*return*/ a + b;
+    // console.log(calc(10, 20));  // return існує тут за замовчуванням
+
+    //
+    // let asd = ()=>console.log('hi');//console.log не має return вона так званий void
+    // console.log(asd()); //undefined
+    //
+    //   let asd1 = function () {
+    //       console.log('hi');
+    // return undefined;   // undefined
+    // };
+    //якщо функція нічого не повертає, то вона повертає undefined
+
+    // let asd = () => console.log(arguments);//в стрілочних функціях не існує arguments
+    // console.log(asd('ASD'));//помилка
+
+    //--------------------------------  JS preview | Функції в об'єктах та контекст this -------------------------------------------------
+    //
+    //
+    // let user = {//this ето обєкт з яким ви працюєте без різниці як він називається
+    //     name: 'vasya',
+    //     age: 31,
+    //     greeting: function (msg) {
+    //         console.log(this);
+    //         return `${msg} my name is ${this.name}`//user.name
+    //
+    //     },
+    //     vitanny: (msg) => `${msg} my age is ${user.age}`//стрілочні функції втрачають контекст this
+    // }
+    //
+    // console.log(user.greeting('hi'));
+    // console.log(user.vitanny('hello'));//undefined
+    //
+
+    // -------------------------------------------- JS preview | Замикання ------------------------------------------------------------------
+//в загальному замикання це можливість функції тримати посилання на якійсь внутрішній обєкт
+
+    // function asd() {
+    //     let x = 10;
+    //
+    //     function inner() {
+    //         return ++x;
+    //     }
+    //
+    //     return inner;
+    // }
+    //
+    // let foo = asd();
+    // console.log(foo());
+    // console.log(foo());
+    // console.log(foo());
+    // console.log(foo());
+
+
+    // let user = {name: 'asdgyqwe', age: 132};
+    // user.age = -100500;
+    //
+    // function userBuilder(name, age) {
+    //     let user = {name, age};
+    //     return {
+    //         getName() {
+    //             return user.name;
+    //         },
+    //         getAge() {
+    //             return user.age;
+    //         },
+    //         setAge(age) {
+    //             if (age > 0) {
+    //                 user.age = age;
+    //             }
+    //         },
+    //     }
+    // }
+    //
+    // let builder = userBuilder('vasya', 31);
+    // console.log(builder);
+    // console.log(builder.getAge());
+    // console.log(builder.getName());
+    // builder.setAge(-100);
+    // console.log(builder.getAge());
+
+
+    // -----------------------------------JS preview | Рекурсія --------------------------------------------------------------------------------
+//1
+    // function foo() {
+    //     console.log('foo');
+    //     // foo();//браузер зависне
+    // }
+    // немає процессу закриття бескінечний штопор
+    // foo();
+//2 дуже потужний но небезпечний інструмент Рекурсією можно замінити цикл
+    //
+    // function iterator(arr, i) {
+    //     console.log(arr[i]);
+    // }
+    // iterator([11, 22, 33], 0);  // 11
+    //
+    //
+    //3
+    //
+    //
+    //
+    //
+    // function iterator(arr, i) {
+    //     console.log(arr[i]);
+    //     i++;
+    //     if (i < arr.length) {
+    //         iterator(arr, i);
+    //     }
+    // }
+    //
+    // iterator([11, 22, 33], 0);//11 22 33
+    // //
+    // let arr = [11, 22, 33, [44, 55], [66, 77, [111, 222]]]; // [11,22,33,44,55]
+    //
+    // let innerArray = [];
+    //
+    // function flatter(array) {
+    //     for (const item of array) {
+    //         if (Array.isArray(item)) {
+    //             flatter(item);
+    //         } else {
+    //             innerArray.push(item);
+    //         }
+    //     }
+    // }
+    //
+    // flatter(arr);
+    //
+    // console.log(innerArray);
+    //
+    //рекурсія допомогає нам подорожувати по багатовимірності
+    //  ------------------------------------------- JS preview | Генератори ---------------------------------------------------------------------
+    // function* foo() {
+    //     yield 100;
+    //     yield 200;
+    //     yield 300;
+    //
+    // }
+    //
+    // let fooGenerator = foo();
+    //
+    // console.log(fooGenerator);
+    // console.log(fooGenerator.next());
+    // //......
+    // //......
+    // //......
+    // console.log(fooGenerator.next());
+    // //......
+    // //......
+    // console.log(fooGenerator.next());
+    // //......
+    // //......
+    // //......
+    // //......
+    // console.log(fooGenerator.next());
+
+    // function* cardsHolder() {
+    //     const cards = [
+    //         {value: 6, suite: 'diamond'},
+    //         {value: 7, suite: 'spade'},
+    //         {value: 8, suite: 'diamond'},
+    //         {value: 9, suite: 'spade'},
+    //     ]
+    //     for (const card of cards) {
+    //         yield card;
+    //     }
+    // }
+    //
+    // const cardsHolderGenerator = cardsHolder();
+    // const card1 = cardsHolderGenerator.next();
+    // console.log(card1.value);
+    // ///......
+    // ///......
+    // ///......
+    // ///......
+    // ///......
+    // const card2 = cardsHolderGenerator.next();
+    // console.log(card2.value);
+    // //.......
+    // //.......
+    // //.......
+    // //.......
+    // //.......
+    //
+    // const card3Data = cardsHolderGenerator.next().value;
+    // console.log(card3Data);
+
+
+
+
+
+
+
+    // --------------------------------------------- JS preview | Обробка помилок ---------------------------------------------------------------
+
+
+</script>
+
+
+</body>
+</html>

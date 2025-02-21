@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // JS preview | Базова інформація про функції
+    // JS preview | Функції з return
+    // JS preview | Змінна arguments у функціях
+    // JS preview | rest argument
+
+    // ------------------------- JS preview | Базова інформація про функції ----------------------------
+//1
+    //document.write(
+    //    `<div>
+    //    <h2>milk 456</h2>
+    //    <p>lorem ipsum2</p>
+    //</div>
+    //`
+    //);
+    //
+    //document.write(
+    //    `<div>
+    //    <h2>tea 12</h2>
+    //    <p>lorem ipsum3</p>
+    //</div>
+    //`
+    // //);
+    //
+
+    // function writer(productTitle, price, descr) {//назви змінних
+    //     document.write(
+    //         `
+    //     <div>
+    //         <h2>${productTitle} ${price}</h2>//ітерації без конкатенацій
+    //         <p>${descr}</p>
+    //     </div>
+    //     `
+    //     );
+    // }
+    //
+    // writer('milk', 32, 'some milk');
+    //
+    //
+    // //.....
+    //
+    // writer('meat', 150, 'akshgdhgsafdhgfads jhgagass hgd');
+// //2
+//
+//     function printerArray(array) {
+//         for (const item of array) {
+//             console.log(item);
+//         }
+//     }
+//
+//     let users = [
+//         {name: 'vasya', age: 31, status: false},
+//         {name: 'petya', age: 30, status: true},
+//         {name: 'kolya', age: 29, status: true},
+//         {name: 'olya', age: 28, status: false},
+//         {name: 'max', age: 30, status: true},
+//         {name: 'anya', age: 31, status: false},
+//         {name: 'oleg', age: 28, status: false},
+//         {name: 'andrey', age: 29, status: true},
+//         {name: 'masha', age: 30, status: true},
+//         {name: 'olya', age: 31, status: false},
+//         {name: 'max', age: 31, status: true}
+//     ];
+//     printerArray(users);
+//
+//
+//     let products = [
+//         {
+//             title: 'milk',
+//             price: 22,
+//             image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+//         },
+//         {
+//             title: 'juice',
+//             price: 27,
+//             image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+//         },
+//         {
+//             title: 'tomato',
+//             price: 47,
+//             image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+//         },
+//         {
+//             title: 'tea',
+//             price: 15,
+//             image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+//         },
+//     ];
+//
+//     printerArray(products);
+//-------------------------------- Functions another POV ----------------------------------------------
+
+    //    let user1 = {
+    //        id: 1,
+    //        name: 'kokos',
+    //        age: 123,
+    //        status: true
+    //    }
+    //    let user2 = {
+    //        id: 2,
+    //        name: 'abrikos',
+    //        age: 234,
+    //        status: false
+    //    }
+    //    let user3 = {
+    //        id: 3,
+    //        name: 'tomat',
+    //        age: 345,
+    //        status: true
+    //    }
+    //    let user4 = {
+    //        id: 4,
+    //        name: 'ogirok',
+    //        age: 456,
+    //        status: false
+    // //    }
+    //
+    // function userFactory(id, imya, age, status) {
+    //     let user = {
+    //         id: id,
+    //         name: imya,
+    //         age: age,
+    //         status: status,
+    //     }
+    //     return user;
+    // }
+    //
+    // let u1 = userFactory(1, 'kokos', 123, true);
+    // let u2 = userFactory(2, 'abrikos', 234, false);
+    // let u3 = userFactory(3, 'tomat', 345, false);
+    // let u4 = userFactory(4, 'cucumber', 456, true);
+
+
+
+    // ---------------------------------------- JS preview | Функції з return -------------------------------------------
+    //1
+    // function calc(a, b) {
+    //     let result = a + b;
+    //     return result;//у випадку якщо після того як функція відпрацювала  вам потрібно результати її відпрацювання використовувати
+    //
+    // }
+    //
+    // let r1 = calc(10, 20);
+    // let r2 = calc(20, 22);
+    // console.log(r1, r2);
+//2
+    // 1000000 pdv warTax
+    // function tax (sum) {
+    //     let pdv = sum /  100 * 20;
+    //     let warTax = sum / 100*1.5;
+    //     return sum-pdv-warTax;
+    // }
+    // let number = tax(10000);
+    // console.log (number);
+
+    // function percentage(sum, per) {
+    //     return sum / 100 * per
+    // }
+    //
+    // function tax(sum) {//одна функція використовує іншу
+    //     return sum - percentage(sum, 20) - percentage(sum, 1.5);
+    // }
+    //
+    // let number = tax(10000);
+    // console.log(number);
+//3
+//     let users = [
+//         {name: 'vasya', age: 31, status: false},
+//         {name: 'petya', age: 30, status: true},
+//         {name: 'kolya', age: 29, status: true},
+//         {name: 'olya', age: 28, status: false},
+//         {name: 'max', age: 30, status: true},
+//         {name: 'anya', age: 31, status: false},
+//         {name: 'oleg', age: 28, status: false},
+//         {name: 'andrey', age: 29, status: true},
+//         {name: 'masha', age: 30, status: true},
+//         {name: 'olya', age: 31, status: false},
+//         {name: 'max', age: 31, status: true}
+//     ];
+//
+//     function userFilter(users) {//camelcase
+//         let filteredUsers = [];
+//         for (const user of users) {
+//             if (user.age > 30) {
+//                 filteredUsers.push(user);
+//             }
+//         }
+//         return filteredUsers;
+//     }
+//     let filter = userFilter(users);
+//     console.log(filter);
+
+
+    // ------------------------------- JS preview | Змінна arguments у функціях --------------------------------------------------
+//Функція починає називатись методом коли вона знаходиться в межах класу
+    // function calc(a, b) {
+    //     return a + b;
+    // }
+    //
+    // function calc(a,b,c) {//calc - це сигнатура
+    //     return a + b + c;
+    // }
+    //Воно бачить тільки останню декларацію
+    // console.log(calc(10, 20, undefined));//NaN
+//Однакові назви але з різною кількістю аргументів а JS (спеціальна змінна arguments) псевдомасив
+//     function foobar() {
+//         console.log(arguments);
+//         if (arguments.length === 2) {
+//             return arguments[0] + arguments[1];
+//         } else if (arguments.length === 3) {
+//             return arguments[0] + arguments[1] + arguments[2];
+//         }
+//     }
+//     console.log(foobar(10, 20));
+//     console.log(foobar(10, 20, 30));
+
+    // ------------------------------------------- JS preview | rest argument -------------------------------------------------
+    //
+    // function asd(y, z, ...x) {// з невизначенною кількістью аргументів масив
+    //     console.log(x);//спочатку ті аргументи які треба впровадити в першу чергу а в кінець то що відноситься к rest аргументу
+    //     console.log(Array.isArray(x));
+    //
+    // }
+    //
+    // asd(1, 2, 3, 4, 5, true);// 1 - y, 2-z, 3,4,5, true   -x
+</script>
+</body>
+</html>
