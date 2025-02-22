@@ -69,7 +69,7 @@
     //
 
     // -------------------------------------------- JS preview | Замикання ------------------------------------------------------------------
-//в загальному замикання це можливість функції тримати посилання на якійсь внутрішній обєкт
+    //в загальному замикання це можливість функції тримати посилання на якійсь внутрішній обєкт
 
     // function asd() {
     //     let x = 10;
@@ -117,14 +117,14 @@
 
 
     // -----------------------------------JS preview | Рекурсія --------------------------------------------------------------------------------
-//1
+    //1
     // function foo() {
     //     console.log('foo');
     //     // foo();//браузер зависне
     // }
     // немає процессу закриття бескінечний штопор
     // foo();
-//2 дуже потужний но небезпечний інструмент Рекурсією можно замінити цикл
+    //2 дуже потужний но небезпечний інструмент Рекурсією можно замінити цикл
     //
     // function iterator(arr, i) {
     //     console.log(arr[i]);
@@ -167,32 +167,25 @@
     //
     //рекурсія допомогає нам подорожувати по багатовимірності
     //  ------------------------------------------- JS preview | Генератори ---------------------------------------------------------------------
-    // function* foo() {
-    //     yield 100;
+    // function* foo() {//функція генератор має множинний return
+    //     yield 100;//для генерації послідовних значень
     //     yield 200;
     //     yield 300;
     //
     // }
+    // console.log(foo());//посилання на внутрішній обєкт
     //
     // let fooGenerator = foo();
     //
     // console.log(fooGenerator);
-    // console.log(fooGenerator.next());
-    // //......
-    // //......
-    // //......
-    // console.log(fooGenerator.next());
-    // //......
-    // //......
-    // console.log(fooGenerator.next());
-    // //......
-    // //......
-    // //......
-    // //......
-    // console.log(fooGenerator.next());
+    // console.log(fooGenerator.next());//100
+    // console.log(fooGenerator.next());//200
+    // console.log(fooGenerator.next());//300, done: false
+    // console.log(fooGenerator.next());//value: undefined, done: true
 
-    // function* cardsHolder() {
-    //     const cards = [
+
+    // function* cardsHolder() { //не забути *
+    //     const cards = [  //масив
     //         {value: 6, suite: 'diamond'},
     //         {value: 7, suite: 'spade'},
     //         {value: 8, suite: 'diamond'},
@@ -203,33 +196,66 @@
     //     }
     // }
     //
-    // const cardsHolderGenerator = cardsHolder();
+    // const cardsHolderGenerator = cardsHolder();//треба обовязково змінна
     // const card1 = cardsHolderGenerator.next();
-    // console.log(card1.value);
-    // ///......
-    // ///......
-    // ///......
-    // ///......
-    // ///......
+    // console.log(card1.value);//6
+    ///......
+    ///......
+    ///......
+    ///......
+    ///......
     // const card2 = cardsHolderGenerator.next();
-    // console.log(card2.value);
-    // //.......
-    // //.......
-    // //.......
-    // //.......
-    // //.......
+    // console.log(card2.value);//7
+    //.......
+    //.......
+    //.......
+    //.......
+    //.......
     //
     // const card3Data = cardsHolderGenerator.next().value;
-    // console.log(card3Data);
-
-
-
-
-
+    // console.log(card3Data);//8
 
 
     // --------------------------------------------- JS preview | Обробка помилок ---------------------------------------------------------------
 
+    //1. синтаксична помилка
+    //let a = '';
+    //let a = '';//задекларували двічі
+    //
+    //2. Reference Error
+    //console.log(b);Звертаєтесь до неіснуючої змінної
+    //
+    // 3. TypeError //якась певна характеристика не являється функцією
+    //let user = {};
+    //user.xxx();//не існує метода xxx
+//Коли появляється помилка, виконання script припиняється
+
+    // console.log('start');//start
+    // try {
+    //     console.log('try block');//try block якщо помилки нема, catch не стається
+    // } catch (e) {     //схопити цю помилку
+    //     console.error(e);//Reference error
+    // } finally {
+    //     console.log('finally block');   // finally block
+    // }
+    // console.log('end');//end
+
+
+    // function calc(a, b) {
+        // try {
+        //
+        //
+        // } catch (e){
+        //
+        // }
+
+    //     if (b === 0) {
+    //         throw new Error('b is 0');
+    //     }
+    //     return a / b;
+    // }
+    //
+    // calc(10, 0);
 
 </script>
 
